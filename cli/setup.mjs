@@ -95,6 +95,7 @@ export async function setupDocs(docsDir, opts = {}) {
     compatibilityDate: 'latest',
     rootDir: docsSrcDir,
     srcDir: docsSrcDir,
+    buildDir: resolve(docsSrcDir, '.nuxt'),
     extends: [...(opts.extends || []), appDir],
     modulesDir: [resolve(pkgDir, 'node_modules'), resolve(docsDir, 'node_modules')],
     modules: ['@nuxt/ui', fixLayers, docsconfig.buildCache ? 'nuxt-build-cache' : undefined].filter(Boolean),
